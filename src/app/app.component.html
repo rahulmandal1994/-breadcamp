@@ -4,7 +4,7 @@
   {{array.length}}
 </p>
 <ul class="breadcrumb">
- <span style="border:1px solid black;padding:5px" class="imageAdjust"></span>
+ <span *ngIf="ShowedIndex>0" style="border:0px solid black;padding:2px" class="imageAdjust" (click)="showAll()"></span>
   <ng-container *ngFor="let link of array;let i = index">
     <li *ngIf="i>=ShowedIndex" >
         <ng-container *ngIf="i!=array.length-1; else plainli" >

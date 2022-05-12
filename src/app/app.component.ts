@@ -20,5 +20,7 @@ export class AppComponent {
     //console.log("--LENTH--",ShowedIndex-3)
     this.ShowedIndex=this.array.length-3;
   }
-
+  showAll(){
+    this.ShowedIndex=0;
+  }
 }
