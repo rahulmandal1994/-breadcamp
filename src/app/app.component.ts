@@ -14,7 +14,7 @@ export class AppComponent {
     {text:'Pictures'},
     {text:'Summer'},
     {text:'Summer 15'},
-    {text:'Italy'},
+    {text:"Italy"},
   ]
   ngOnInit(){
     //console.log("--LENTH--",ShowedIndex-3)

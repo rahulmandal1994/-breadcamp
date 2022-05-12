@@ -1,18 +1,24 @@
 <hello name="{{ name }}"></hello>
 <p>
   Start editing to see some magic happen :)
-  {{array.length}}
+  {{ array.length }}
 </p>
 <ul class="breadcrumb">
- <span *ngIf="ShowedIndex>0" style="border:0px solid black;padding:2px" class="imageAdjust" (click)="showAll()"></span>
-  <ng-container *ngFor="let link of array;let i = index">
-    <li *ngIf="i>=ShowedIndex" >
-        <ng-container *ngIf="i!=array.length-1; else plainli" >
-          <a *ngIf="i!=array.length-1" href="#">{{link.text}}</a>
-        </ng-container>
-        <ng-template #plainli>
-          {{link.text}}   
-        </ng-template>
+  <span
+    *ngIf="ShowedIndex > 0"
+    style="border:0px solid black;padding:2px"
+    class="imageAdjust"
+    (click)="showAll()"
+  ></span>&nbsp;
+  <ng-container *ngFor="let link of array; let i = index">
+    <li *ngIf="i >= ShowedIndex">
+      <ng-container *ngIf="i != array.length - 1; else plainli">
+        <a *ngIf="i != array.length - 1" href="#" style="">{{ link.text }}</a>
+      </ng-container>
+      <ng-template #plainli style="padding:0px">
+        <label>{{ link.text }}</label>
+      </ng-template>
+      <span *ngIf="i != array.length - 1" style="padding:0 10px">/</span>
     </li>
   </ng-container>
 </ul>
